@@ -1,0 +1,184 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  height: 40px;
+  /* text-align: center; */
+}
+
+.App-header {
+  display: flex;
+  /* text-align: center; */
+  background-color: #103d5d;
+  /* height: 100px; */
+  padding: 10px;
+  color: white;
+}
+
+.App-title {
+  ext-align: center;
+  font-size: 1.5em;
+}
+
+.Todo-container {
+  display: grid;
+  font-size: large;
+}
+
+.add-todo {
+  border-radius: 2px;
+  border-top: 3px solid #103d5d;
+  /* margin-right: 50px; */
+  background-color: rgb(237, 237, 237);
+  padding: 30px 18px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 34px;
+  width: 25%;
+  min-width: 200px;
+}
+
+.display-todos {
+  display: grid;
+  width: 65%;
+  min-width: 200px;
+  height: 100vh;
+  /* margin-left: 50px; */
+}
+
+.display-todos button {
+  /* margin-top: 20px; */
+  margin-left: auto;
+  display: block;
+}
+
+.add-todo form {
+  width: 100%;
+  overflow: hidden;
+  border-top: solid #103d5d;
+}
+
+.todos-boxes {
+  display: grid;
+  flex-direction: column;
+  width: 100%;
+}
+
+main {
+  padding: 30px;
+  display: flex;
+}
+
+input {
+  font-size: 22px;
+  color: #000;
+  padding: 18px 22px;
+  font-size: 16px;
+  margin-bottom: 17px;
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  margin-left: 30px;
+  padding: 0;
+}
+
+li:hover {
+  cursor: pointer;
+  /* -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05); */
+  transform: scale(1.02);
+}
+
+li {
+  /* width: calc(100% - 50px); */
+  list-style-type: none;
+  /* margin-right: 50px; */
+  background-color: rgb(237, 237, 237);
+  color: #000;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+li h3 {
+  background-color: #105d1a;
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  padding: 1px 4px;
+  text-align: right;
+}
+
+li h3:hover {
+  background-color: #5d1510;
+  content: "Delete Message";
+}
+
+li p {
+  padding: 1px 4px;
+  margin: 5px;
+}
+
+li p:active {
+  animation: blinker 1.5s ease-in infinite;
+  background-color: #fa6900;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 2px;
+  min-width: 88px;
+  background-color: #103d5d;
+  cursor: pointer;
+  border: 0;
+  min-width: 120px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 10px 6px;
+}
+
+.upgrade-form {
+  margin-top: 60px;
+  border-top: solid #103d5d;
+}
+
+.btn-upgrade {
+  background-color: #fa6900;
+}
+.red{
+  background-color: #fa2500;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
