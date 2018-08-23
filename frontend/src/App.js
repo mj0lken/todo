@@ -34,7 +34,7 @@ class App extends Component {
         updateTodo: "",
         updating: ""
       });
-    } else if(this.state.currentTodo) {
+    } else if (this.state.currentTodo) {
       this.postTodo(this.state.currentTodo);
       this.setState({
         currentTodo: "",
@@ -120,8 +120,8 @@ class App extends Component {
                 value={this.state.currentTodo}
               />
               <button>Add 2do</button>
-              </form>
-              <form onSubmit={this.handleSubmit}>
+            </form>
+            <form onSubmit={this.handleSubmit}>
               {this.state.updating && (
                 <div className="upgrade-form">
                   <input
@@ -132,7 +132,12 @@ class App extends Component {
                     value={this.state.updateTodo}
                   />
                   <button className="btn-upgrade">Update</button>
-                  <button className="btn-upgrade red" onClick={() => this.setState({updating: ""})}>Ignore</button>
+                  <button
+                    className="btn-upgrade red"
+                    onClick={() => this.setState({ updating: "" })}
+                  >
+                    Ignore
+                  </button>
                 </div>
               )}
             </form>
@@ -144,7 +149,11 @@ class App extends Component {
                 {this.state.todos.map(item => {
                   return (
                     <li key={item.id}>
-                      <h3 onClick={() => this.deleteTodo(item._id)}> 2DO </h3>
+                      <h3 className="hoverable" onClick={() => this.deleteTodo(item._id)}>
+                        {" "}
+                        <span className="hover">DELETE</span>{" "}
+                        <span className="normal">2DO</span>{" "}
+                      </h3>
                       <p onClick={() => this.updatingTodo(item)}>
                         {" "}
                         {item.title}{" "}
